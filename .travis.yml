@@ -26,6 +26,7 @@ after_success:
   - ssh-keygen -f ~/.ssh/google_compute_engine -N ""
   # build image
   - docker --version
-  - docker build -t gcr.io/$PROJECT_NAME_PRD/$DOCKER_IMAGE_NAME:v1 ./node-myapiai
+  - docker build -t gcr.io/$PROJECT_NAME_PRD/$DOCKER_IMAGE_NAME:v1 ./docker-test
   - gcloud --quiet config set project $PROJECT_NAME_PRD
   - gcloud docker push gcr.io/${PROJECT_NAME_PRD}/${DOCKER_IMAGE_NAME}
+
