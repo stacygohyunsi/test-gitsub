@@ -28,5 +28,5 @@ after_success:
   - docker --version
   - docker build -t gcr.io/$PROJECT_NAME_PRD/$DOCKER_IMAGE_NAME:v1 ./docker-test
   - gcloud --quiet config set project $PROJECT_NAME_PRD
-  - gcloud docker push gcr.io/${PROJECT_NAME_PRD}/${DOCKER_IMAGE_NAME}
+  - gcloud docker push gcr.io/oikos-cluster/${PROJECT_NAME_PRD}/${DOCKER_IMAGE_NAME}
 
